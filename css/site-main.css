@@ -1,3 +1,27 @@
 @charset "utf-8";
 /* CSS Document */
 
+#style-page-header
+{
+	background-color: #4D4D4D;
+	clear: both;
+	display: inline-block;
+	width: 100%;
+	top: 0px;
+	position: fixed;
+}
+
+.style-h1-test
+{
+	font-family: Arial, sans-serif;
+	font-size: 20pt;
+	height: 40pt;
+	width: auto;
+}
+
+body
+{
+	color: #CECECE;
+	background-color: #383838;
+	margin: 0px;
+}

@@ -9,8 +9,14 @@
 <!-- TemplateBeginEditable name="head" -->
 <!-- TemplateEndEditable -->
 <link href="../css/site-main.css" rel="stylesheet" type="text/css" media="screen">
+<script   src="https://code.jquery.com/jquery-1.12.3.min.js"   integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   crossorigin="anonymous"></script>
 </head>
 
 <body>
+<div id="style-page-header">
+<a href="../index.html">
+<img src="../images/while-false-banner-1024.png" alt="While False Studios" class="style-h1-test" title="While False Logo"/>
+</a>
+</div>
 </body>
 </html>
