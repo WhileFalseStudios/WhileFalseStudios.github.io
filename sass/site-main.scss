@@ -7,11 +7,29 @@ $site_accent_orange: #ca861b;
 $header_height: 40pt;
 $site_header_color: #4D4D4D;
 
-@mixin vertical-align($position: relative) {
+//Mixins
+
+@mixin vertical-align($position: relative) 
+{
   position: $position;
   //top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+@mixin orange-accent($size: 2pt)
+{
+	border-bottom: $size solid $site_accent_orange;
+}
+
+//Template classes
+.wf-button-base
+{
+	margin-left: 2pt;
+	margin-right: 2pt;
+	border-bottom: 2pt solid $site_accent_orange;
+	transition: background-color 0.3s, border-bottom-width 0.3s;
+	-webkit-transition: background-color 0.3s, border-bottom-width 0.3s;
 }
 
 #style-page-header
@@ -37,16 +55,11 @@ $site_header_color: #4D4D4D;
 
 .nav-span-object
 {
-	//@include vertical-align();
+	@extend .wf-button-base; 
 	display: inline-block;
 	min-width: 100pt;
 	background-color: $site_header-color;
 	height: 100%;
-	margin-left: 2pt;
-	margin-right: 2pt;
-	border-bottom: 2pt solid $site_accent_orange;
-	transition: background-color 0.3s, border-bottom-width 0.3s;
-	-webkit-transition: background-color 0.3s, border-bottom-width 0.3s;
 }
 
 .nav-span-object:hover
@@ -67,6 +80,7 @@ $site_header_color: #4D4D4D;
 	font-size: 20pt;
 	height: $header_height;
 	width: auto;
+	border-left: 2pt solid $site-accent-orange;
 }
 
 #page-body
@@ -74,7 +88,12 @@ $site_header_color: #4D4D4D;
 	background-color: $site-header-color;
 	width: 90%;
 	margin-left: auto;
+	margin-top: 10pt;
 	margin-right: auto;
+	padding-left: 20pt;
+	padding-right: 20pt;
+	padding-top: 1pt;
+	border-left: 2pt solid $site-accent-orange;
 }
 
 body
