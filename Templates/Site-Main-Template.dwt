@@ -10,7 +10,7 @@
 <!-- TemplateEndEditable -->
 <link href="../css/site-main.css" rel="stylesheet" type="text/css" media="screen">
 <script   src="https://code.jquery.com/jquery-1.12.3.min.js"   integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   crossorigin="anonymous"></script>
-
+<!-- Old resizing code (no CSS) -->
 <script>
 function ResizeHeader()
 {
@@ -26,8 +26,8 @@ function ResizeHeader()
 	}
 }
 
-$(window).on("resize", ResizeHeader);
-$(window).on("load", ResizeHeader);
+//$(window).on("resize", ResizeHeader);
+//$(window).on("load", ResizeHeader);
 </script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
@@ -39,7 +39,7 @@ $(window).on("load", ResizeHeader);
 <body>
 <div id="page-header-desktop">
 	<a href="//whilefalsestudios.com">
-	<img src="../images/logo-big.svg" alt="While False Studios" class="style-h1-test"/>
+		<img src="../images/logo-big.svg" alt="While False Studios" class="style-h1-test"/>
 	</a>
 	<nav class="header-nav-wrapper">
 		<div class="nav-span-object"><p class="nav-item-text">Test</p></div>
@@ -48,11 +48,15 @@ $(window).on("load", ResizeHeader);
 </div>
 
 <div id="page-header-mobile">
-	<img src="../images/logo-small.svg" class="wfs-logo-small"/>
+	<a href="//whilefalsestudios.com">
+		<img src="../images/logo-small.svg" class="wfs-logo-small" alt="WFS"/>
+    </a>
 </div>
 
 <div id="page-body">
-	<p>Hello!</p>
+	<!-- TemplateBeginEditable name="Body" -->
+    <p>Hello!</p>
+    <!-- TemplateEndEditable -->
 </div>
 </body>
 </html>

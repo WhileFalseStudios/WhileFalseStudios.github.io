@@ -7,9 +7,10 @@ $site_accent_orange: #ca861b;
 $header_height: 40pt;
 $site_header_color: #4D4D4D;
 $site_header_border: 2pt solid $site_accent_orange;
+$site_body_border: 8pt solid $site_accent_orange;
+$site_body_border_mobile: 4pt solid $site_accent_orange;
 
 //Mixins
-
 @mixin vertical-align($position: relative) 
 {
   position: $position;
@@ -45,12 +46,12 @@ $site_header_border: 2pt solid $site_accent_orange;
 }
 
 
-
+//IDs
 #page-header-desktop
 {
 	height: $header_height;
 	background-color: $site_header_color;
-	border-left: $site-header-border;
+	//border-left: $site-header-border;
 	clear: both;
 	display: inline-block;
 	width: 100%;
@@ -64,6 +65,22 @@ $site_header_border: 2pt solid $site_accent_orange;
 	display: none;
 }
 
+#page-body
+{
+	background-color: $site-header-color;
+	width: 90%;
+	margin-left: auto;
+	margin-top: 20pt;
+	margin-right: auto;
+	padding-left: 20pt;
+	padding-right: 20pt;
+	padding-top: 1pt;
+	padding-bottom: 1pt;
+	border-left: $site_body_border;
+	max-width: 1024px;
+}
+
+//Page element classes
 .header-nav-wrapper
 {
 	height: 100%;
@@ -120,24 +137,36 @@ $site_header_border: 2pt solid $site_accent_orange;
 	//border-bottom: $site-header-border;
 }
 
-#page-body
-{
-	background-color: $site-header-color;
-	width: 90%;
-	margin-left: auto;
-	margin-top: 10pt;
-	margin-right: auto;
-	padding-left: 20pt;
-	padding-right: 20pt;
-	padding-top: 1pt;
-	border-left: 2pt solid $site-accent-orange;
-}
-
 body
 {
 	color: $site_text_color;
 	background-color: $site_bg_color;
 	margin: 0px;
+}
+
+@media screen and (max-width: 900px)
+{
+	#page-header-mobile
+	{
+		display: inline-block !important;
+	}
+	
+	#page-header-desktop
+	{
+		display: none;
+	}
+	
+	#page-body
+	{
+		//margin-left: 0px;
+		//margin-right: 0px;
+		//border: 0px;
+		border-left: $site_body_border_mobile;
+		width: 95%;
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	
 }
 
 *
