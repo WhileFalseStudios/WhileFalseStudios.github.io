@@ -10,26 +10,9 @@
 <!-- TemplateEndEditable -->
 <link href="../css/site-main.css" rel="stylesheet" type="text/css" media="screen">
 <script   src="https://code.jquery.com/jquery-1.12.3.min.js"   integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   crossorigin="anonymous"></script>
-<!-- Old resizing code (no CSS) -->
-<script>
-function ResizeHeader()
-{
-	if ($(window).width() > 900)
-	{
-		$("#page-header-desktop").css("display", "inline-block");
-		$("#page-header-mobile").css("display", "none");
-	}
-	else
-	{
-		$("#page-header-desktop").css("display", "none");
-		$("#page-header-mobile").css("display", "inline-block");
-	}
-}
-
-//$(window).on("resize", ResizeHeader);
-//$(window).on("load", ResizeHeader);
-</script>
-
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/zenburn.min.css">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
 <!-- TemplateBeginEditable name="Description" -->
 <meta description="Hobbist game developer and other creative endevours">
@@ -38,13 +21,15 @@ function ResizeHeader()
  
 <body>
 <div id="page-header-desktop">
+<div class="page-aligned">
 	<a href="//whilefalsestudios.com">
 		<img src="../images/logo-big.svg" alt="While False Studios" class="style-h1-test"/>
 	</a>
 	<nav class="header-nav-wrapper">
-		<div class="nav-span-object"><p class="nav-item-text">Test</p></div>
+		<a href="//whilefalsestudios.com"><div class="nav-span-object"><p class="nav-item-text">Test</p></div></a>
     	<div class="nav-span-object"><p class="nav-item-text">Test 2</p></div>
 	</nav>
+    </div>
 </div>
 
 <div id="page-header-mobile">
@@ -55,8 +40,28 @@ function ResizeHeader()
 
 <div id="page-body">
 	<!-- TemplateBeginEditable name="Body" -->
-    <p>Hello!</p>
+    <p class="wfs-h1">HELLO</p>
+    <p>This is an example paragraph. It uses no class, only setting document-wide settings.</p>
+    <pre><code class="syntax-fixup">
+    using System;
+    
+    public class Program 
+    {    
+    	public static void Main()
+        {
+    		Console.WriteLine("Hello, world!");
+    	}
+    }
+    </code>
+    </pre>
+    <p>See, that code is awesome! The power of technology!</p>
+    <p>While False Studios - A Creative Project</p>
     <!-- TemplateEndEditable -->
 </div>
+
+<div id="page-footer">
+	<p class="text-centred" id="footer-text">(C) 2016 While False Studios | Hosted by <a href="http://github.com/WhileFalseStudios/WhileFalseStudios.github.io">GitHub Pages</a></p>
+</div>
+
 </body>
 </html>

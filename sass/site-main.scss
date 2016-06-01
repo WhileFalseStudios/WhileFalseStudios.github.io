@@ -10,6 +10,8 @@ $site_header_border: 2pt solid $site_accent_orange;
 $site_body_border: 8pt solid $site_accent_orange;
 $site_body_border_mobile: 4pt solid $site_accent_orange;
 
+$site-page-max-width: 1100px;
+
 //Mixins
 @mixin vertical-align($position: relative) 
 {
@@ -77,18 +79,44 @@ $site_body_border_mobile: 4pt solid $site_accent_orange;
 	padding-top: 1pt;
 	padding-bottom: 1pt;
 	border-left: $site_body_border;
-	max-width: 1024px;
+	max-width: $site-page-max-width;
+}
+
+#page-footer
+{
+	background-color: $site-accent-orange;
+	//max-width: $site-page-max-width;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	//border-top: $site-header-border;
+}
+
+#footer-text
+{
+	padding-top: 5pt;
+	padding-bottom: 5pt;
+	@include unselectable();
+	margin-bottom: 0px;
 }
 
 //Page element classes
 .header-nav-wrapper
 {
-	height: 100%;
+	height: $header_height;
 	text-align: center;
 	display: inline-block;
 	background-color: $site_header_color;	
 	font-size: 20pt;
 	float: right;
+}
+
+.page-aligned
+{
+	max-width: $site-page-max-width;
+	//display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .nav-span-object
@@ -135,6 +163,30 @@ $site_body_border_mobile: 4pt solid $site_accent_orange;
 	margin-right: auto;
 	border: 0px;
 	//border-bottom: $site-header-border;
+}
+
+.wfs-h1
+{
+	font-size: 30pt;
+	border-bottom: $site_header_border;
+	margin-top: 15pt;
+	margin-bottom: 15pt;
+}
+
+.text-centred
+{
+	text-align: center;
+}
+
+.syntax-fixup
+{
+	font-family: Consolas, Monaco, Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+	font-size: 10pt;
+}
+
+a
+{
+	color: $site-text-color;
 }
 
 body

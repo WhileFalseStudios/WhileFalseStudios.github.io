@@ -10,26 +10,9 @@
 <!-- InstanceEndEditable -->
 <link href="css/site-main.css" rel="stylesheet" type="text/css" media="screen">
 <script   src="https://code.jquery.com/jquery-1.12.3.min.js"   integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   crossorigin="anonymous"></script>
-<!-- Old resizing code (no CSS) -->
-<script>
-function ResizeHeader()
-{
-	if ($(window).width() > 900)
-	{
-		$("#page-header-desktop").css("display", "inline-block");
-		$("#page-header-mobile").css("display", "none");
-	}
-	else
-	{
-		$("#page-header-desktop").css("display", "none");
-		$("#page-header-mobile").css("display", "inline-block");
-	}
-}
-
-//$(window).on("resize", ResizeHeader);
-//$(window).on("load", ResizeHeader);
-</script>
-
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/zenburn.min.css">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
 <!-- InstanceBeginEditable name="Description" -->
 <meta description="Hobbist game developer and other creative endevours">
@@ -38,13 +21,15 @@ function ResizeHeader()
  
 <body>
 <div id="page-header-desktop">
+<div class="page-aligned">
 	<a href="//whilefalsestudios.com">
 		<img src="images/logo-big.svg" alt="While False Studios" class="style-h1-test"/>
 	</a>
 	<nav class="header-nav-wrapper">
-		<div class="nav-span-object"><p class="nav-item-text">Test</p></div>
+		<a href="//whilefalsestudios.com"><div class="nav-span-object"><p class="nav-item-text">Test</p></div></a>
     	<div class="nav-span-object"><p class="nav-item-text">Test 2</p></div>
 	</nav>
+    </div>
 </div>
 
 <div id="page-header-mobile">
@@ -55,7 +40,246 @@ function ResizeHeader()
 
 <div id="page-body">
 	<!-- InstanceBeginEditable name="Body" -->
+    <p class="wfs-h1">HELLO, WORLD!</p>
+    <p>While False Studios is a Creative Project</p>
+    <p>Have some example code:</p>
+    <pre><code class="syntax-fixup css">
+    //Site colors
+$site_bg_color: #383838;
+$site_text_color: #FFFFFF; //#CECECE
+$site_accent_orange: #ca861b;
+
+//Header stuff
+$header_height: 40pt;
+$site_header_color: #4D4D4D;
+$site_header_border: 2pt solid $site_accent_orange;
+$site_body_border: 8pt solid $site_accent_orange;
+$site_body_border_mobile: 4pt solid $site_accent_orange;
+
+$site-page-max-width: 1100px;
+
+//Mixins
+@mixin vertical-align($position: relative) 
+{
+  position: $position;
+  //top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin orange-accent($size: 2pt)
+{
+	border-bottom: $size solid $site_accent_orange;
+}
+
+@mixin unselectable()
+{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+//Template classes
+.wf-button-base
+{
+	margin-left: 2pt;
+	margin-right: 2pt;
+	border-bottom: $site-header-border;
+	transition: background-color 0.3s, border-bottom-width 0.3s;
+	-webkit-transition: background-color 0.3s, border-bottom-width 0.3s;
+	cursor: alias;
+}
+
+
+//IDs
+#page-header-desktop
+{
+	height: $header_height;
+	background-color: $site_header_color;
+	//border-left: $site-header-border;
+	clear: both;
+	display: inline-block;
+	width: 100%;
+	top: 0px;
+	//position: fixed;
+}
+
+#page-header-mobile
+{
+	@extend #page-header-desktop;
+	display: none;
+}
+
+#page-body
+{
+	background-color: $site-header-color;
+	width: 90%;
+	margin-left: auto;
+	margin-top: 20pt;
+	margin-right: auto;
+	padding-left: 20pt;
+	padding-right: 20pt;
+	padding-top: 1pt;
+	padding-bottom: 1pt;
+	border-left: $site_body_border;
+	max-width: $site-page-max-width;
+}
+
+#page-footer
+{
+	background-color: $site-accent-orange;
+	//max-width: $site-page-max-width;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	//border-top: $site-header-border;
+}
+
+#footer-text
+{
+	padding-top: 5pt;
+	padding-bottom: 5pt;
+	@include unselectable();
+}
+
+//Page element classes
+.header-nav-wrapper
+{
+	height: $header_height;
+	text-align: center;
+	display: inline-block;
+	background-color: $site_header_color;	
+	font-size: 20pt;
+	float: right;
+}
+
+.page-aligned
+{
+	max-width: $site-page-max-width;
+	//display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.nav-span-object
+{
+	@extend .wf-button-base; 
+	display: inline-block;
+	min-width: 100pt;
+	background-color: $site_header_color;
+	height: 100%;
+	cursor: pointer;
+}
+
+.nav-span-object:hover
+{
+	background-color: $site_accent_orange;
+	border-bottom: 0px;
+}
+
+.nav-item-text
+{
+	@include vertical-align();
+	@include unselectable();
+	padding: 0px;
+}
+
+.style-h1-test
+{
+	//@include vertical-align();
+	padding-left: 10pt;
+	position: relative;
+	-webkit-transform: translateY(25%);
+	transform: translateY(25%);
+	font-family: Arial, sans-serif;
+	font-size: 20pt;
+	height: 25pt;
+	width: auto;
+}
+
+.wfs-logo-small
+{
+	@extend .style-h1-test;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border: 0px;
+	//border-bottom: $site-header-border;
+}
+
+.wfs-h1
+{
+	font-size: 30pt;
+	border-bottom: $site_header_border;
+	margin-top: 15pt;
+	margin-bottom: 15pt;
+}
+
+.text-centred
+{
+	text-align: center;
+}
+
+.syntax-fixup
+{
+	font-family: Consolas, Monaco, Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+	font-size: 10pt;
+}
+
+a
+{
+	color: $site-text-color;
+}
+
+body
+{
+	color: $site_text_color;
+	background-color: $site_bg_color;
+	margin: 0px;
+}
+
+@media screen and (max-width: 900px)
+{
+	#page-header-mobile
+	{
+		display: inline-block !important;
+	}
+	
+	#page-header-desktop
+	{
+		display: none;
+	}
+	
+	#page-body
+	{
+		//margin-left: 0px;
+		//margin-right: 0px;
+		//border: 0px;
+		border-left: $site_body_border_mobile;
+		width: 95%;
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	
+}
+
+*
+{
+	font-family: Verdana, Arial, sans-serif;
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+}
+    </code></pre>
+    <p>See, cool!</p>
     <!-- InstanceEndEditable -->
 </div>
+
+<div id="page-footer">
+	<p class="text-centred" id="footer-text">(C) 2016 While False Studios | Hosted by <a href="http://github.com/WhileFalseStudios/WhileFalseStudios.github.io">GitHub Pages</a></p>
+</div>
+
 </body>
 <!-- InstanceEnd --></html>
