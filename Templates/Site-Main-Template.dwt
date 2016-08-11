@@ -18,7 +18,7 @@
 <meta description="Hobbist game developer and other creative endevours">
 <!-- TemplateEndEditable -->
 </head>
- 
+
 <body>
 <div id="page-header-desktop">
 <div class="page-aligned">
@@ -26,8 +26,8 @@
 		<img src="../images/logo-big.svg" alt="While False Studios" class="style-h1-test"/>
 	</a>
 	<nav class="header-nav-wrapper">
-		<a href="//whilefalsestudios.com"><div class="nav-span-object"><p class="nav-item-text">Test</p></div></a>
-    	<div class="nav-span-object"><p class="nav-item-text">Test 2</p></div>
+		<a href="//whilefalsestudios.com"><div class="nav-span-object"><p class="nav-item-text">Gamedev</p></div></a>
+    	<a href="//whilefalsestudios.com"><div class="nav-span-object"><p class="nav-item-text">Writing</p></div></a>
 	</nav>
     </div>
 </div>
@@ -44,9 +44,9 @@
     <p>This is an example paragraph. It uses no class, only setting document-wide settings.</p>
     <pre><code class="syntax-fixup">
     using System;
-    
-    public class Program 
-    {    
+
+    public class Program
+    {
     	public static void Main()
         {
     		Console.WriteLine("Hello, world!");
@@ -56,7 +56,7 @@
     </pre>
     <p>See, that code is awesome! The power of technology!</p>
     <p>While False Studios - A Creative Project</p>
-    <!-- TemplateEndEditable -->
+  <!-- TemplateEndEditable -->
 </div>
 
 <div id="page-footer">

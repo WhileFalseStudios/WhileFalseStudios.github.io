@@ -47,6 +47,16 @@ $site-page-max-width: 1100px;
 	cursor: alias;
 }
 
+.wrapper
+{
+	min-height: 100%;
+	margin-bottom: -45px;
+}
+
+.push
+{
+	height: 45px;
+}
 
 //IDs
 #page-header-desktop
@@ -87,6 +97,7 @@ $site-page-max-width: 1100px;
 	background-color: $site-accent-orange;
 	//max-width: $site-page-max-width;
 	width: 100%;
+	height: 30px;
 	margin-left: auto;
 	margin-right: auto;
 	//border-top: $site-header-border;
@@ -98,6 +109,7 @@ $site-page-max-width: 1100px;
 	padding-bottom: 5pt;
 	@include unselectable();
 	margin-bottom: 0px;
+	font-size: 10pt;
 }
 
 //Page element classes
@@ -180,7 +192,7 @@ $site-page-max-width: 1100px;
 
 .syntax-fixup
 {
-	font-family: Consolas, Monaco, Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+	font-family: Consolas, Monaco, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
 	font-size: 10pt;
 }
 
@@ -194,6 +206,11 @@ body
 	color: $site_text_color;
 	background-color: $site_bg_color;
 	margin: 0px;
+}
+
+html, body
+{
+	height: 100%;
 }
 
 @media screen and (max-width: 900px)
