@@ -1,22 +1,21 @@
 <!doctype html>
-<html><!-- InstanceBegin template="/Templates/Site-Main-Template.dwt" codeOutsideHTMLIsLocked="false" -->
+<html>
 <head>
 <meta charset="utf-8">
 
-<!-- InstanceBeginEditable name="doctitle" -->
-<title>While False Studios</title>
-<!-- InstanceEndEditable -->
-<!-- InstanceBeginEditable name="head" -->
-<!-- InstanceEndEditable -->
-<link href="css/site-main.css" rel="stylesheet" type="text/css" media="screen">
+<title>{{ page.title }}</title>
+
+{% include base.html %}
+
+<link href="{{base}}/css/site-main.css" rel="stylesheet" type="text/css" media="screen">
 <script   src="https://code.jquery.com/jquery-1.12.3.min.js"   integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   crossorigin="anonymous"></script>
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/zenburn.min.css">
 <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
-<!-- InstanceBeginEditable name="Description" -->
-<meta description="Hobbist game developer and other creative endevours">
-<!-- InstanceEndEditable -->
+
+<meta description="{{ page.description }}">
+
 </head>
  
 <body>
@@ -24,7 +23,7 @@
 	<div id="page-header-desktop">
 	<div class="page-aligned">
 		<a href="//whilefalsestudios.com">
-			<img src="images/logo-big.svg" alt="While False Studios" class="style-h1-test"/>
+			<img src="{{base}}/images/logo-big.svg" alt="While False Studios" class="style-h1-test"/>
 		</a>
 		<nav class="header-nav-wrapper">
 			<a href="//whilefalsestudios.com"><div class="nav-span-object"><p class="nav-item-text">Games</p></div></a>
@@ -35,15 +34,13 @@
 
 	<div id="page-header-mobile">
 		<a href="//whilefalsestudios.com">
-			<img src="images/logo-small.svg" class="wfs-logo-small" alt="WFS"/>
+			<img src="{{base}}/images/logo-small.svg" class="wfs-logo-small" alt="WFS"/>
 		</a>
 	</div>
 
 	<div id="page-body">
-		<!-- InstanceBeginEditable name="Body" -->
-		<p class="wfs-h1">UNDER CONSTRUCTION</p>
-		<p>This site is still under construction. Come back later for something cool!</p>
-		<!-- InstanceEndEditable -->
+		<p class="wfs-h1">{{ page.title }}</p>
+		{{ content }}
 	</div>
 
 	<div class="push"></div>
@@ -52,4 +49,4 @@
 		<p class="text-centred" id="footer-text">(C) 2016 While False Studios | Hosted by <a href="http://github.com/WhileFalseStudios/WhileFalseStudios.github.io">GitHub Pages</a></p>
 	</div>
 </body>
-<!-- InstanceEnd --></html>
+</html>

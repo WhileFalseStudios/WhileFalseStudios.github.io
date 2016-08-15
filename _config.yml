@@ -1,1 +1,22 @@
 timezone: Australia/Sydney
+
+name: While False Studios
+
+description: Hobbyist game developer
+
+kramdown:
+    input: GFM
+
+sass:
+    style: :compressed
+
+exclude:
+    - Gemfile
+    - Gemfile.lock
+    - LICENSE
+    - README.md
+    - CNAME
+    - Templates/*
+    - sass/*
+    - dev/*
+    - robots.txt
