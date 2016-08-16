@@ -12,6 +12,8 @@ $site_body_border_mobile: 4pt solid $site_accent_orange;
 
 $site-page-max-width: 1100px;
 
+$site-drop-shadow: 0px 2px 0px 0px rgba(0,0,0,0.3);
+
 //Mixins
 @mixin vertical-align($position: relative) 
 {
@@ -68,6 +70,9 @@ $site-page-max-width: 1100px;
 	display: inline-block;
 	width: 100%;
 	top: 0px;
+	-webkit-box-shadow: $site-drop-shadow;
+	-moz-box-shadow: $site-drop-shadow;
+	box-shadow: $site-drop-shadow;
 	//position: fixed;
 }
 
@@ -75,6 +80,12 @@ $site-page-max-width: 1100px;
 {
 	@extend #page-header-desktop;
 	display: none;
+}
+
+.wfs-mob-sidebar
+{
+	@include unselectable();
+	display: inline;
 }
 
 #page-body
@@ -177,12 +188,26 @@ $site-page-max-width: 1100px;
 	//border-bottom: $site-header-border;
 }
 
-.wfs-h1
+.wfs-h1, h1
 {
 	font-size: 30pt;
+	font-weight: normal;
 	border-bottom: $site_header_border;
 	margin-top: 15pt;
 	margin-bottom: 15pt;
+}
+
+h2
+{
+	@extend .wfs-h1;
+	font-size: 20pt;
+}
+
+h3
+{
+	@extend .wfs-h1;
+	font-size: 20pt;
+	border: 0;
 }
 
 .text-centred
@@ -201,10 +226,18 @@ a
 	color: $site-text-color;
 }
 
+#page-body p
+{
+	text-align: justify;
+	text-justify: inter-word;
+}
+
 body
 {
 	color: $site_text_color;
 	background-color: $site_bg_color;
+	background-attachment: fixed;
+	background-size: cover;
 	margin: 0px;
 }
 
