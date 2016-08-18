@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Background Animator</title>
+        <script   src="https://code.jquery.com/jquery-1.12.3.min.js"   integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   crossorigin="anonymous"></script>
+        <link href="bg-anim.css" type="text/css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div id="anim-bg"></div>
+        <script>
+
+            function translate3d(x, y, z)
+            {
+                return "translate3d(" + x.toString() + "px, " + y.toString() + "px, " + z.toString() + "px)";
+            }
+
+            $(document).ready(function()
+            {
+                $('#anim-bg').mousemove(function(e)
+                {
+                    var xDiff = e.pageX - ($('#anim-bg').width() / 2);
+                    var yDiff = e.pageY - ($('#anim-bg').width() / 2);
+                    //console.log(translate3d(xDiff / 50, yDiff / 50, 0));
+                    $('#anim-bg').css('transform', translate3d(xDiff / 50, yDiff / 50, 0));
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+#anim-bg
+{
+    background-image: url(bg.jpg);
+    width: 110%;
+    height: 110%;
+    position: absolute;
+    background-size: cover;
+    top: -5%;
+    left: -5%;
+    transform: translate3d(0.0px, 0.0px, 0.0px);
+}
+
+html, body
+{
+    margin: 0;
+    overflow: hidden;
+}

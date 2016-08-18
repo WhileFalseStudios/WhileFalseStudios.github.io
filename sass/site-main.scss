@@ -12,7 +12,9 @@ $site_body_border_mobile: 4pt solid $site_accent_orange;
 
 $site-page-max-width: 1100px;
 
-$site-drop-shadow: 0px 0px 20px -2px rgba(0, 0, 0, 0.75);
+$site-drop-shadow: 0px 0px 20px -2px rgba(0, 0, 0, 0.75); 
+
+$bg_image_file: url(/images/bg-1.svg);
 
 //Mixins
 @mixin vertical-align($position: relative) 
@@ -80,6 +82,28 @@ $site-drop-shadow: 0px 0px 20px -2px rgba(0, 0, 0, 0.75);
 {
 	@extend #page-header-desktop;
 	display: none;
+}
+
+#background-image
+{
+	background-image: $bg_image_file;
+	width: 110%;
+	height: 110%;
+	position: absolute;
+	background-size: cover;
+	top: -5%;
+	left: -5%;
+	transform: translate3d(0.0px, 0.0px, 0.0px);
+	transition: transform 0.1s ease-out;
+}
+
+#background-image-wrapper
+{
+	width: 100%;
+	height: 100%;
+	z-index: -10;
+	position: fixed;
+	overflow: hidden;
 }
 
 .wfs-mob-sidebar
@@ -239,7 +263,7 @@ body
 {
 	color: $site_text_color;
 	background-color: $site_bg_color;
-	background-image: url(/images/bg-1.svg);
+	//background-image: $bg_image_file;
 	background-attachment: fixed;
 	background-size: cover;
 	margin: 0px;

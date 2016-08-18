@@ -11,6 +11,8 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+<script src="/js/depth.js"></script>
+<script>InitMovingBackground('#background-image');</script>
 <script>hljs.initHighlightingOnLoad();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
 
@@ -19,6 +21,9 @@
 </head>
  
 <body>
+	<div id="background-image-wrapper">
+		<div id="background-image"></div>
+	</div>
 <div class="wrapper">
 	<div id="page-header-desktop">
 	<div class="page-aligned">
@@ -42,7 +47,7 @@
 	</div>
 
 	<div id="page-body">
-		<p class="wfs-h1">{{ page.title }}</p>
+		<h1>{{ page.title }}</h1>
 		{{ content }}
 	</div>
 
