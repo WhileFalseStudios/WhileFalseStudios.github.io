@@ -22,6 +22,7 @@ $bg_image_file: url(/images/bg-1.svg);
   position: $position;
   //top: 50%;
   -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -106,10 +107,67 @@ $bg_image_file: url(/images/bg-1.svg);
 	overflow: hidden;
 }
 
+#blackout
+{
+	z-index: 50;
+	position: fixed;
+	display: inline;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0);
+	pointer-events: none;
+	transition: background-color 0.1s ease-in-out;
+}
+
+#wfs-mob-menu
+{
+	z-index: 100;
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+	left: 100%;
+	background-color: $site_header_color;
+	border-left: 2pt solid $site_accent_orange;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	transition: left 0.1s ease-in-out;
+}
+
+.menu-padder
+{
+	padding: 5px;
+	margin-right: 20px;
+	width: 75%;
+}
+
+.wfs-displayontop
+{
+	z-index: 100;
+}
+
 .wfs-mob-sidebar
 {
 	@include unselectable();
 	display: inline;
+	position: absolute;
+	left: 5px;
+	top: 0px;
+	color: white;
+	background-color: rgba(0, 0, 0, 0);
+	border: 0;
+	padding-top: 0px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.wfs-mob-sidebar p
+{
+	@include vertical-align();
+	margin-bottom: 0px;
 }
 
 #page-body
@@ -296,6 +354,27 @@ html, body
 		width: 95%;
 		padding-left: 1%;
 		padding-right: 1%;
+	}
+
+	#page-body p
+	{
+		font-size: 16px;
+	}
+
+	.nav-span-object
+	{
+		width: 70%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		height: 30pt;
+		border: 2pt solid $site_accent_orange;
+		margin-bottom: 10pt;
+	}
+
+	.nav-span-object p
+	{
+		text-align: center;
 	}
 	
 }

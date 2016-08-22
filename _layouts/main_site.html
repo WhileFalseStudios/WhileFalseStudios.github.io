@@ -15,15 +15,46 @@
 <script src="/js/depth.js"></script>
 <script>InitMovingBackground('#background-image');</script>
 <script>hljs.initHighlightingOnLoad();</script>
+<script>
+	var mDrawerEnabled = true;
+
+	function ToggleMobileDrawer()
+	{
+		mDrawerEnabled = !mDrawerEnabled;
+		var menu = $('#wfs-mob-menu');
+		var blackout = $('#blackout');
+
+		if (mDrawerEnabled)
+		{
+			menu.css('left', '100%');
+			blackout.css('background-color', 'rgba(0, 0, 0, 0)')
+		}
+		else
+		{
+			menu.css('left', '20%');
+			blackout.css('background-color', 'rgba(0, 0, 0, 0.75)')
+		}
+	}
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
 
 <meta description="{{ page.description }}">
 
 </head>
- 
+
 <body>
 	<div id="background-image-wrapper">
 		<div id="background-image"></div>
+	</div>
+
+	<div id="blackout"></div>
+
+	<div id="wfs-mob-menu">
+		<div class="menu-padder">
+			<h2>Menu</h2>
+			<a href="/games/"><div class="nav-span-object"><p class="nav-item-text">Games</p></div></a>
+			<a href="/about/"><div class="nav-span-object"><p class="nav-item-text">About</p></div></a>
+		</div>
 	</div>
 <div class="wrapper">
 	<div id="page-header-desktop">
@@ -42,9 +73,9 @@
 		<a href="//whilefalsestudios.com">
 			<img src="/images/logo-small.svg" class="wfs-logo-small" alt="WFS"/>
 		</a>
-		<div class="wfs-mob-sidebar">
-			<p class="material-icons">menu</p>
-		</div>
+		<button class="wfs-mob-sidebar" onclick="ToggleMobileDrawer()">
+			<p class="material-icons wfs-displayontop">menu</p>
+		</button>
 	</div>
 
 	<div id="page-body">
