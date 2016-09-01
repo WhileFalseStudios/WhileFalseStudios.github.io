@@ -5,37 +5,19 @@
 
 <title>{{ page.title }}</title>
 
-<script   src="https://code.jquery.com/jquery-1.12.3.min.js"   integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   crossorigin="anonymous"></script>
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/zenburn.min.css">
 <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-<link href="/css/site-main.css" rel="stylesheet" type="text/css" media="screen">
+<link href="/css/site-main.css" rel="stylesheet" type="text/css" media="screen" id="main-style">
+<script   src="https://code.jquery.com/jquery-1.12.3.min.js"   integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   crossorigin="anonymous"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
 <script src="/js/depth.js"></script>
+<script src="/js/slideshow.js"></script>
+<script src="/js/drawer.js"></script>
 <script>InitMovingBackground('#background-image');</script>
 <script>hljs.initHighlightingOnLoad();</script>
-<script>
-	var mDrawerEnabled = true;
 
-	function ToggleMobileDrawer()
-	{
-		mDrawerEnabled = !mDrawerEnabled;
-		var menu = $('#wfs-mob-menu');
-		var blackout = $('#blackout');
-
-		if (mDrawerEnabled)
-		{
-			menu.css('left', '100%');
-			blackout.css('background-color', 'rgba(0, 0, 0, 0)')
-		}
-		else
-		{
-			menu.css('left', '20%');
-			blackout.css('background-color', 'rgba(0, 0, 0, 0.75)')
-		}
-	}
-</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
 
 <meta description="{{ page.description }}">
@@ -59,7 +41,7 @@
 <div class="wrapper">
 	<div id="page-header-desktop">
 	<div class="page-aligned">
-		<a href="//whilefalsestudios.com">
+		<a href="/">
 			<img src="/images/logo-big.svg" alt="While False Studios" class="style-h1-test"/>
 		</a>
 		<nav class="header-nav-wrapper">
@@ -70,7 +52,7 @@
 	</div>
 
 	<div id="page-header-mobile">
-		<a href="//whilefalsestudios.com">
+		<a href="/">
 			<img src="/images/logo-small.svg" class="wfs-logo-small" alt="WFS"/>
 		</a>
 		<button class="wfs-mob-sidebar" onclick="ToggleMobileDrawer()">
@@ -88,5 +70,13 @@
 <div id="page-footer">
 		<p class="text-centred" id="footer-text">(C) 2016 While False Studios | Hosted by <a href="http://github.com/WhileFalseStudios/WhileFalseStudios.github.io">GitHub Pages</a></p>
 	</div>
+
+<script>
+	if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1)
+	{
+		$('#wfs-mob-menu').css('display', 'none');
+		alert("Mobile view will not work correctly with Firefox currently. Please consider using a different browser for the time being.");
+	}
+</script>
 </body>
 </html>

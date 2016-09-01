@@ -5,4 +5,4 @@ description: Under construction
 permalink: /index.html
 ---
 
-This site is still under construction. Please come back later.
+While False Studios is a hobbyist indie game developer based in Sydney Australia. We currently have three members and are working on our first game for release.
