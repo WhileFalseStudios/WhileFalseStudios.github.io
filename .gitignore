@@ -2,3 +2,5 @@ _site/*
 .bundle
 .jekyll_metadata
 *.scssc
+
+.DS_Store
