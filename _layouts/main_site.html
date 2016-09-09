@@ -34,8 +34,8 @@
 	<div id="wfs-mob-menu">
 		<div class="menu-padder">
 			<h2>Menu</h2>
-			<a href="/games/"><div class="nav-span-object"><p class="nav-item-text">Games</p></div></a>
-			<a href="/about/"><div class="nav-span-object"><p class="nav-item-text">About</p></div></a>
+			<a href="/games/"><div class="nav-span-object"><span class="nav-item-text">Games</span></div></a>
+			<a href="/about/"><div class="nav-span-object"><span class="nav-item-text">About</span></div></a>
 		</div>
 	</div>
 <div class="wrapper">
@@ -75,7 +75,12 @@
 	if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1)
 	{
 		$('#wfs-mob-menu').css('display', 'none');
-		alert("Mobile view will not work correctly with Firefox currently. Please consider using a different browser for the time being.");
+
+		if (document.cookie === "")
+		{
+			alert("Mobile view will not work correctly with Firefox currently. Please consider using a different browser, such as Chrome, for the time being. If you insist on using Firefox for desktop mode, please enable web components in your about:config.");
+			document.cookie = "foxbroken=true;path=/";
+		}
 	}
 </script>
 </body>

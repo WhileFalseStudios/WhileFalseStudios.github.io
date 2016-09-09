@@ -451,6 +451,11 @@ a
 	font-size: 18px;
 }
 
+*::selection
+{
+	background-color: $site_accent_orange;
+}
+
 img
 {
 	height: auto;
