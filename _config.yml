@@ -7,6 +7,8 @@ description: Hobbyist game developer
 kramdown:
     input: GFM
 
+highlighter: rouge
+
 sass:
     style: :compressed
 

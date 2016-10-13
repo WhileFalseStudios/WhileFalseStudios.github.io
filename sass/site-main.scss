@@ -42,6 +42,14 @@ $bg_image_file: url(/images/bg-1.svg);
     user-select: none;
 }
 
+//Override HLJS
+
+pre *
+{
+	font-family: 'Consolas', monospace;
+	font-size: 12pt;
+}
+
 //Override W3.css stuff
 .wfs-icon-left, .wfs-icon-right, .wfs-badge
 {
@@ -77,6 +85,82 @@ $bg_image_file: url(/images/bg-1.svg);
 	height: 45px;
 }
 
+//START NEW HEADER
+.header-logo-left
+{
+	float: left;
+	padding-left: 10pt;
+}
+
+.header-img
+{
+	height: 100%;
+	width: auto;
+}
+
+.header-middle-push
+{
+	width: auto;
+	height: 100%;
+}
+
+.header-nav-right
+{
+	float: right;
+}
+
+.hack
+{
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+}
+
+.header-image
+{
+	height: 25pt;
+	width: auto;
+	vertical-align: middle;
+}
+
+.header-logo-a
+{
+	text-decoration: none;
+}
+//END NEW HEADER
+
+//START DROPDOWN
+
+.wfs-dropdown-content
+{
+	z-index: 100;
+	display: none;
+	position: absolute;
+	background-color: $site_bg_color;
+	min-width: 160px;
+	box-shadow: $site-drop-shadow;
+}
+
+.wfs-dropdown-content a 
+{
+	padding: 12px 16px;
+	display: block;
+	text-align: left;
+	text-decoration: none;
+}
+
+.wfs-dropdown-content a:hover
+{
+	color: $site_accent_orange;
+}
+
+.show
+{
+	display: block;
+}
+
+//END DROPDOWN
+
 //IDs
 #page-header-desktop
 {
@@ -84,10 +168,11 @@ $bg_image_file: url(/images/bg-1.svg);
 	height: $header_height;
 	background-color: $site_header_color;
 	//border-left: $site-header-border;
-	clear: both;
 	display: inline-block;
+	position: relative;
 	width: 100%;
 	top: 0px;
+	z-index: 10;
 	-webkit-box-shadow: $site-drop-shadow;
 	-moz-box-shadow: $site-drop-shadow;
 	box-shadow: $site-drop-shadow;
@@ -261,6 +346,7 @@ $bg_image_file: url(/images/bg-1.svg);
 #page-body
 {
 	background-color: $site-header-color;
+	z-index: 0;
 	width: 90%;
 	margin-left: auto;
 	margin-top: 20pt;
@@ -323,6 +409,11 @@ $bg_image_file: url(/images/bg-1.svg);
 	background-color: $site_header_color;
 	height: 100%;
 	cursor: pointer;
+
+	text-align: center;
+	line-height: 40pt;
+	font-size: 18pt;
+
 }
 
 .nav-span-object:hover
@@ -334,8 +425,9 @@ $bg_image_file: url(/images/bg-1.svg);
 
 .nav-item-text
 {
-	@include vertical-align();
+	//@include vertical-align();
 	@include unselectable();
+	height: 100%;
 	padding: 0px;
 }
 
@@ -479,6 +571,7 @@ html, body
 	height: 100%;
 }
 
+//TODO: change mobile view to use resized desktop rather than completely separate layout.
 @media screen and (max-width: 900px)
 {
 	#page-header-mobile

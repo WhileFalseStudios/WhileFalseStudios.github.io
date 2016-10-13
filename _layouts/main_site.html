@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 <link href="/css/site-main.css" rel="stylesheet" type="text/css" media="screen" id="main-style">
+<script src="/js/webcomponents-lite.min.js"></script>
 <script   src="https://code.jquery.com/jquery-1.12.3.min.js"   integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   crossorigin="anonymous"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
 <script src="/js/depth.js"></script>
@@ -39,15 +40,36 @@
 		</div>
 	</div>
 <div class="wrapper">
-	<div id="page-header-desktop">
+	<!-- OLD Header does not work on firefox. <div id="page-header-desktop">
 	<div class="page-aligned">
 		<a href="/">
 			<img src="/images/logo-big.svg" alt="While False Studios" class="style-h1-test"/>
 		</a>
 		<nav class="header-nav-wrapper">
-			<a href="/games/"><div class="nav-span-object"><p class="nav-item-text">Games</p></div></a>
-			<a href="/about/"><div class="nav-span-object"><p class="nav-item-text">About</p></div></a>
+			<div class="nav-span-object"><a class="wfs-link" href="/games/"><p class="nav-item-text">Games</p></a></div>
+			<a class="wfs-link" href="/about/"><div class="nav-span-object"><p class="nav-item-text">About</p></div></a>
 		</nav>
+		</div>
+	</div> -->
+
+	<div id="page-header-desktop">
+		<div class="page-aligned">
+			<div class="header-logo-left">
+				<a href="/" class="header-logo-a">
+					<div style="height:40pt;">
+						<span class="hack"></span>
+						<img src="/images/logo-big.svg" alt="While False Studios" class="header-image"/>
+					</div>
+				</a>
+			</div>                    
+			<div class="header-nav-right">
+				<a href="#" onclick="toggleDropDown(event)"><div class="nav-span-object dropdown" linked="gamesmenu">Games</div></a>
+					<div class="wfs-dropdown-content" id="gamesmenu">
+						<a href="/games/lpexplode">LPExplode</a>
+						<a href="/games/bec">Big Evil Cube</a>						
+					</div>
+				<a href="/about/"><div class="nav-span-object">About</div></a>
+			</div>
 		</div>
 	</div>
 
@@ -78,7 +100,7 @@
 
 		if (document.cookie === "")
 		{
-			alert("Mobile view will not work correctly with Firefox currently. Please consider using a different browser, such as Chrome, for the time being. If you insist on using Firefox for desktop mode, please enable web components in your about:config.");
+			alert("Mobile view will not work correctly with Firefox currently. Please consider using a different browser, such as Chrome, for the time being.");
 			document.cookie = "foxbroken=true;path=/";
 		}
 	}

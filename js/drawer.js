@@ -18,8 +18,27 @@ function ToggleMobileDrawer()
     }
 }
 
-function GoDark()
-{
-    $('#main-style').attr('href', '/css/site-dark.css');
-    alert('1973 Mode Engaged!');
+//Drop down menus
+
+function toggleDropDown(event) {
+    console.log(event);
+    console.log(event.target.attributes);
+    var linked = event.target.getAttribute('linked');
+    console.log(linked);
+    document.getElementById(linked).classList.toggle("show");
+    return false;
+}
+
+window.onclick = function(event) {
+    console.log(event.target);
+    if (!event.target.matches('.dropdown')) {
+        var dropdowns = document.getElementsByClassName("wfs-dropdown-content");
+        var i;
+        for (i =0; i < dropdowns.length; i++) {
+            var open = dropdowns[i];
+            if (open.classList.contains('show')) {
+                open.classList.remove('show');
+            }
+        }
+    }
 }
