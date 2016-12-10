@@ -5,7 +5,14 @@ function translate3d(x, y, z)
 
 function InitMovingBackground(item)
 {
-    $(document).ready(function()
+    document.documentElement.onmousemove = function(e)
+    {
+        var xDiff = e.pageX - item.offsetWidth / 2;
+        var yDiff = e.pageY - item.offsetWidth / 2;
+        item.style.transform = translate3d(xDiff / 50, yDiff / 50, 0);
+    }
+
+    /* $(document).ready(function()
     {
         $(document).mousemove(function(e)
         {
@@ -13,5 +20,5 @@ function InitMovingBackground(item)
             var yDiff = e.pageY - ($(item).width() / 2);
             $(item).css('transform', translate3d(xDiff / 50, yDiff / 50, 0));
         });
-    });
+    }); */
 }

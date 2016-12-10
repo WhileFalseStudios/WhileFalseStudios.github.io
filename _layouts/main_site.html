@@ -6,17 +6,16 @@
 <title>{{ page.title }}</title>
 
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/zenburn.min.css">
-<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato:300,300i|Work+Sans" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 <link href="/css/site-main.css" rel="stylesheet" type="text/css" media="screen" id="main-style">
 <script src="/js/webcomponents-lite.min.js"></script>
-<script   src="https://code.jquery.com/jquery-1.12.3.min.js"   integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   crossorigin="anonymous"></script>
+<!-- <script   src="https://code.jquery.com/jquery-1.12.3.min.js"   integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   crossorigin="anonymous"></script> -->
 <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
 <script src="/js/depth.js"></script>
 <script src="/js/slideshow.js"></script>
 <script src="/js/drawer.js"></script>
-<script>InitMovingBackground('#background-image');</script>
 <script>hljs.initHighlightingOnLoad();</script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
@@ -32,13 +31,13 @@
 
 	<div id="blackout"></div>
 
-	<div id="wfs-mob-menu">
+	 <!-- <div id="wfs-mob-menu">
 		<div class="menu-padder">
 			<h2>Menu</h2>
 			<a href="/games/"><div class="nav-span-object"><span class="nav-item-text">Games</span></div></a>
 			<a href="/about/"><div class="nav-span-object"><span class="nav-item-text">About</span></div></a>
 		</div>
-	</div>
+	</div> -->
 <div class="wrapper">
 	<!-- OLD Header does not work on firefox. <div id="page-header-desktop">
 	<div class="page-aligned">
@@ -58,29 +57,29 @@
 				<a href="/" class="header-logo-a">
 					<div style="height:40pt;">
 						<span class="hack"></span>
-						<img src="/images/logo-big.svg" alt="While False Studios" class="header-image"/>
+						<img src="/images/logo-big.svg" alt="While False Studios" class="header-image wfs-logo-big"/>
+						<img src="/images/logo-small.svg" class="wfs-logo-small" alt="WFS"/>
 					</div>
 				</a>
 			</div>                    
 			<div class="header-nav-right">
-				<a href="#" onclick="toggleDropDown(event)"><div class="nav-span-object dropdown" linked="gamesmenu">Games</div></a>
+				<a href="/games/" onmouseover="toggleDropDown(event)"><div class="nav-span-object dropdown" linked="gamesmenu">Games</div></a>
 					<div class="wfs-dropdown-content" id="gamesmenu">
-						<a href="/games/lpexplode">LPExplode</a>
-						<a href="/games/bec">Big Evil Cube</a>						
+						<a href="/games/jams">Game Jams</a>				
 					</div>
 				<a href="/about/"><div class="nav-span-object">About</div></a>
 			</div>
 		</div>
 	</div>
 
-	<div id="page-header-mobile">
+<!--	<div id="page-header-mobile">
 		<a href="/">
-			<img src="/images/logo-small.svg" class="wfs-logo-small" alt="WFS"/>
+			
 		</a>
 		<button class="wfs-mob-sidebar" onclick="ToggleMobileDrawer()">
 			<p class="material-icons wfs-displayontop">menu</p>
 		</button>
-	</div>
+	</div> -->
 
 	<div id="page-body">
 		<h1>{{ page.title }}</h1>
@@ -94,16 +93,19 @@
 	</div>
 
 <script>
-	if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1)
+	InitMovingBackground(document.getElementById('background-image'));
+
+	/* if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1)
 	{
-		$('#wfs-mob-menu').css('display', 'none');
+		//$('#wfs-mob-menu').css('display', 'none');
+		document.getElementById('wfs-mob-menu').style.display = 'none';
 
 		if (document.cookie === "")
 		{
 			alert("Mobile view will not work correctly with Firefox currently. Please consider using a different browser, such as Chrome, for the time being.");
 			document.cookie = "foxbroken=true;path=/";
 		}
-	}
+	} */
 </script>
 </body>
 </html>

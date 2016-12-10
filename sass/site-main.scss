@@ -2,6 +2,7 @@
 $site_bg_color: #383838;
 $site_text_color: #FFFFFF; //#CECECE
 $site_accent_orange: #ca861b;
+$site_accent_green: #1caa4a;
 
 //Header stuff
 $header_height: 40pt;
@@ -451,6 +452,7 @@ pre *
 	margin-left: auto;
 	margin-right: auto;
 	border: 0px;
+	display: none;
 	//border-bottom: $site-header-border;
 }
 
@@ -528,12 +530,18 @@ h3
 
 a
 {
-	color: $site-text-color;
+	color: $site_text_color;
+}
+
+#page-body a
+{
+	color: $site_accent_orange;
+	font-style: oblique;
 }
 
 #page-body a:hover
 {
-	color: $site_accent_orange;
+	color: $site_accent_green;
 }
 
 #page-body p
@@ -574,12 +582,27 @@ html, body
 //TODO: change mobile view to use resized desktop rather than completely separate layout.
 @media screen and (max-width: 900px)
 {
-	#page-header-mobile
+	/* #page-header-mobile
 	{
 		display: inline-block !important;
 	}
 	
 	#page-header-desktop
+	{
+		display: none;
+	} */
+
+	.wfs-logo-small
+	{
+		display: inline-block;
+	}
+
+	.header-logo-left
+	{
+		padding-left: 100pt;
+	}
+
+	.wfs-logo-big
 	{
 		display: none;
 	}
@@ -600,7 +623,7 @@ html, body
 		font-size: 16px;
 	}
 
-	.nav-span-object
+	/* .nav-span-object
 	{
 		width: 70%;
 		display: block;
@@ -609,18 +632,31 @@ html, body
 		height: 30pt;
 		border: 2pt solid $site_accent_orange;
 		margin-bottom: 10pt;
-	}
+	} */
 
-	.nav-span-object p
+	/* .nav-span-object p
 	{
 		text-align: center;
-	}
+	} */
 	
+}
+
+@media screen and (max-width: 610px)
+{
+	.header-logo-left
+	{
+		display: none;
+	}
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	font-family: 'Work Sans', sans-serif;
 }
 
 *
 {
-	font-family: 'Muli', Verdana, Arial, sans-serif;
+	font-family: 'Lato', sans-serif;
 	transform-style: preserve-3d;
 	-webkit-transform-style: preserve-3d;
 }
