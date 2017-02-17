@@ -1,0 +1,246 @@
+@import "common";
+
+$site-accent-orange: #ca861b;
+$site-accent-green: #1caa4a;
+$site-header-color: #4D4D4D;
+$site-bg-color: #383838;
+
+$site-orange-border: 2pt solid $site-accent-orange;
+
+@mixin no-select()
+{
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+//Copied from old sass file
+
+.show
+{
+	display: block !important;
+}
+
+.wfs-dropdown-content
+{
+    color: white;
+	z-index: 100;
+	display: none;
+	position: absolute;
+	background-color: $site-bg-color;
+	min-width: 160px;
+	box-shadow: $site-drop-shadow;
+}
+
+.wfs-dropdown-content a 
+{
+	padding: 12px 16px;
+	display: block;
+	text-align: left;
+	text-decoration: none;
+}
+
+.wfs-dropdown-content a:visited
+{
+    color: white;
+}
+
+.wfs-dropdown-content a:hover
+{
+	color: $site_accent_orange;
+}
+
+//End copied
+
+.msg //This is used for the less broken message.
+{
+    float: right;
+    text-align: right;
+}
+
+.page-constrain-width
+{
+    max-width: $page-width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-wfs-logo
+{
+    height: 30pt;
+    width: auto;
+}
+
+.wfs-header
+{
+    background-color: $site-header-color;
+    box-shadow: $site-drop-shadow; 
+    padding-top: 10pt;
+    padding-bottom: 5pt;
+    padding-left: 20pt;
+    padding-right: 20pt;
+    @include no-select();
+}
+
+.wfs-nav
+{
+    width: 100%;
+    margin-top: 10pt;  
+    display: flex;  
+    justify-content: center;
+}
+
+.nav-pusher
+{
+    display: inline-block;
+    width: 50%;
+}
+
+.wfs-nav a
+{
+    text-decoration: none;
+}
+
+.wfs-nav-item
+{
+    margin-left: 8pt;
+    margin-right: 8pt;
+    padding-top: 4pt;
+    padding-bottom: 4pt;
+    border-bottom: $site-orange-border;
+    text-align: center;
+    min-width: 100pt;
+    font-size: 18pt;
+    color: white;
+    transition: background-color 0.3s, border-radius 0.05s;
+}
+
+.wfs-nav-item:hover
+{
+    background-color: $site-accent-orange;
+    border-radius: 2pt;
+}
+
+.wfs-main
+{
+    padding-top: 1pt;
+    padding-bottom: 15pt;
+    padding-left: 18pt;
+    padding-right: 18pt;
+    border-left: 8pt solid $site-accent-orange;
+    margin-top: 20pt;
+    margin-bottom: 30pt;
+    background-color: $site-header-color;
+    box-shadow: $site-drop-shadow; 
+}
+
+.wfs-main p
+{
+    font-size: 18px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.wfs-main a
+{
+    font-style: oblique;
+    color: $site-accent-orange;
+}
+
+.wfs-main a:hover
+{
+    color: $site-accent-green;
+}
+
+.wfs-footer
+{
+    background-color: $site-accent-orange;
+    padding-left: 20pt;
+    padding-right: 20pt;
+    padding-top: 3pt;
+    padding-bottom: 3pt;
+    position: absolute;
+    //bottom: 0px;
+    left: 0;
+    right: 0;
+    cursor: default;
+    @include no-select();
+}
+
+.wfs-footer p
+{
+    font-family: "Work Sans", "Arial", sans-serif;
+    margin: 0;
+    font-size: 10pt;
+    text-align: center;
+}
+
+.wfs-footer a
+{
+    font-family: "Work Sans", "Arial", sans-serif;
+    color: white;
+    font-style: oblique;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    font-family: "Work Sans", "Arial", sans-serif;
+    font-size: 30pt;
+    font-weight: normal;
+    border-bottom: $site-orange-border;
+    margin-top: 15pt;
+    margin-bottom: 15pt;
+}
+
+h2
+{
+    font-size: 20pt;
+}
+
+h3
+{
+    font-size: 18pt;
+    border: 0;
+    margin-bottom: 2px;
+    padding-left: 10pt;
+    border-left: $site-orange-border;
+}
+
+::selection
+{
+    background-color: $site-accent-orange;
+    color: black;
+}
+
+a::selection
+{
+    color: $site-accent-green;
+}
+
+::-moz-selection
+{
+    background-color: $site-accent-orange;
+    color: black;
+}
+
+a::-moz-selection
+{
+    color: #880c1a;
+}
+
+body
+{
+    background-color: $site-bg-color;
+    background-image: url(/images/bg-1.svg);
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    margin-left: 20pt;
+    margin-right: 20pt;
+    color: white;
+}
+
+*
+{
+    font-family: "Lato", "Arial", sans-serif;
+}

@@ -1,9 +1,12 @@
 ---
-layout: main_site
+layout: wfs-new
 title: Game Jams
 description: Game Jams are scary and fun. Here's the ones we've done (I can rhyme - awesome).
+useGallery: true
 permalink: /games/jams/index.html
 ---
+
+# Game Jams
 
 We participate in game jams when silly things like "real-life responsibilties" aren't getting in the way. Here's a journal of all our days of incredibly unhealthy sleep patterns.
 
@@ -14,7 +17,30 @@ Participants: Andrew, David
 
 We successfully finished the Ludum Dare 37 Jam (theme: One Room), creating a first-person platformer with a time travel mechanic similar to Titanfall 2. 
 
-<div is="wfs-gallery" images='{"images":["http://img.itch.io/aW1hZ2UvMTA1MTUyLzQ4ODAxNC5qcGc=/original/jvTT%2F%2F.jpg", "http://img.itch.io/aW1hZ2UvMTA1MTUyLzQ4ODAxNS5qcGc=/original/9%2FKNz6.jpg", "http://img.itch.io/aW1hZ2UvMTA1MTUyLzQ4ODAxNi5qcGc=/original/oQUm3J.jpg"]}'></div>
+<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="/images/wfs-ld37/ld37-1.jpg" itemprop="contentUrl" data-size="1920x1080">
+            <img src="/images/wfs-ld37/thumbs/ld37-1.jpg" itemprop="thumbnail" alt="Image description" />
+        </a>
+        <figcaption itemprop="caption description">Screenshot from the past/under construction timeline.</figcaption>
+    </figure>
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="/images/wfs-ld37/ld37-2.jpg" itemprop="contentUrl" data-size="1920x1080">
+            <img src="/images/wfs-ld37/thumbs/ld37-2.jpg" itemprop="thumbnail" alt="Image description" />
+        </a>
+        <figcaption itemprop="caption description">Screenshot from the present/mall timeline.</figcaption>
+    </figure>
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="/images/wfs-ld37/ld37-3.jpg" itemprop="contentUrl" data-size="1920x1080">
+            <img src="/images/wfs-ld37/thumbs/ld37-3.jpg" itemprop="thumbnail" alt="Image description" />
+        </a>
+        <figcaption itemprop="caption description">That ground texture though.</figcaption>
+    </figure>
+</div>
 
-A postmortem of the game's development can be found at [the Ludum Dare blog](http://ludumdare.com/compo/2016/12/12/wait-we-actually-finished-a-postmortem-of-our-first-jam/).
+Our first jam was much more hectic than stressful than we were expecting, and we were *already* expecting stress. The game only came together right at the end, having gone through a couple of different structures for the level. Our first idea involved a longer but graphically simpler series of areas, but the player could only be in one version of each room at a time. This proved to be too difficult to design and was time consuming to make, so we went for a more streamlined idea that was more true to the theme. In the end, a single, larger room was more mechanically interesting too, as it allowed interesting interactions between the two timelines.
+
+Unfortunately, we didn't get time for much testing, so most of our feedback informed us the level was too difficult. If there was one part we could have improved on, it was the readability of the level design and the path up the room.
+
+The original, slightly delirious from sleep deprivation postmortem of the game's development can be found at [the Ludum Dare blog](http://ludumdare.com/compo/2016/12/12/wait-we-actually-finished-a-postmortem-of-our-first-jam/).
 <br>

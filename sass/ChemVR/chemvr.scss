@@ -1,0 +1,31 @@
+@import "../common";
+
+$vr-border: 2pt solid red;
+
+main
+{
+    max-width: $page-width;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5pt;
+    border: $vr-border;
+    box-shadow: $site-drop-shadow;
+    margin-top: 20pt;
+}
+
+main a
+{
+    color: red;
+}
+
+body
+{
+    margin: 0;
+    background-image: url(/images/chemvr/vr-background.png);
+}
+
+*
+{
+    font-family: 'Mate', 'Times New Roman', Times, serif;
+}

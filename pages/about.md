@@ -1,9 +1,11 @@
 ---
-layout: main_site
+layout: wfs-new
 title: About
 description: About While False Studios
 permalink: /about/index.html
 ---
+
+# About While False Studios
 
 While False Studios is a hobbyist game developer based in Sydney, Australia. We currently have 3-ish members, depending on life commitments.
 

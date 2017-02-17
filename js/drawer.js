@@ -27,10 +27,11 @@ function ToggleMobileDrawer()
 //Drop down menus
 
 function toggleDropDown(event) {
-    console.log(event);
-    console.log(event.target.attributes);
+    //console.log(event);
+    //console.log(event.target.attributes);
     var linked = event.target.getAttribute('linked');
-    console.log(linked);
+    //console.log(linked);
+    document.getElementById('msg').innerText = "But that's still broken.";
     document.getElementById(linked).classList.toggle("show");
     return false;
 }

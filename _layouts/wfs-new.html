@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ page.title }}</title>
+        <link href="/css/wfs.css" type="text/css" rel="stylesheet">
+        {% if page.useGallery == true %}
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" type="text/css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css" type="text/css" rel="stylesheet">
+        <link href="/css/photoswipe/gallery.css" type="text/css" rel="stylesheet">
+        {% endif %}
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,300i|Work+Sans" rel="stylesheet">        
+        <script src="/js/drawer.js"></script>
+        <script src="/js/footer.js"></script>
+        {% if page.useGallery == true %}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js"></script>
+        <script src="/js/photoswipe/photoswipe-gallery.js"></script>
+        {% endif %}
+        <meta description="{{ page.description }}">
+    </head>
+    <body>
+        <header class="page-constrain-width wfs-header">
+            <a href="/"><img class="header-wfs-logo" src="/images/logo-big.svg" /></a>
+            <span class="msg" id="msg">Website now 30% less broken!</span>
+            <nav class="wfs-nav">
+                <a href="#" onmouseover="toggleDropDown(event)"><div class="wfs-nav-item dropdown" linked="games">Games</div></a>
+                    <div class="wfs-dropdown-content" id="games">
+                        <a href="/games/jams">Game Jams</a>
+                    </div>
+                <a href="/about/"><div class="wfs-nav-item">About</div></a>
+            </nav>
+        </header>
+        <main class="page-constrain-width wfs-main">
+            {{ content }}
+        </main>
+        <footer class="wfs-footer" id="footer">
+            <div class="page-constrain-width">
+                <p>Copyright While False Studios 2016-2017 | <a href="/credits/">Credits</a> | Hosted by <a target="_blank" href="http://github.com/WhileFalseStudios/WhileFalseStudios.github.io">GitHub Pages</a></p>
+            </div>
+        </footer>
+
+    {% if page.useGallery == true %}
+        <!-- Root element of PhotoSwipe. Must have class pswp. -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<script>
+    initPhotoSwipeFromDOM('.my-gallery');
+</script>
+{% endif %}
+
+    </body>
+</html>
