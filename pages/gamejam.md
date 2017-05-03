@@ -55,13 +55,13 @@ We followed up our first jam right away with Ludum Dare 38 (theme: Small World) 
 <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
     <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="/images/wfs-ld38/ld38-1.jpg" itemprop="contentUrl" data-size="1923x1080">
-            <img src="/images/wfs-ld38/thumbs/ld38-1.jpg" itemprop="thumbnail" alt="This image is missing. Run!" />
+            <img src="/images/wfs-ld38/thumbs/ld38-1.jpg" itemprop="thumbnail" alt="Alt" />
         </a>
         <figcaption itemprop="caption description">Screenshot of IRPDP in action.</figcaption>
     </figure>
     <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="/images/wfs-ld38/ld38-2.jpg" itemprop="contentUrl" data-size="1917x1078">
-            <img src="/images/wfs-ld38/thumbs/ld38-2.jpg" itemprop="thumbnail" alt="Price check on isle 38..." />
+            <img src="/images/wfs-ld38/thumbs/ld38-2.jpg" itemprop="thumbnail" alt="Alt" />
         </a>
         <figcaption itemprop="caption description">Screenshot from the ugly dark side of the planet.</figcaption>
     </figure>
