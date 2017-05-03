@@ -44,3 +44,30 @@ Unfortunately, we didn't get time for much testing, so most of our feedback info
 
 The original, slightly delirious from sleep deprivation postmortem of the game's development can be found at [the Ludum Dare blog](http://ludumdare.com/compo/2016/12/12/wait-we-actually-finished-a-postmortem-of-our-first-jam/).
 <br>
+
+## Ludum Dare 38 - April 2017
+Participants: Andrew, David, with advice from Wisley
+
+[itch.io page](https://wfs.itch.io/irpdp)
+
+We followed up our first jam right away with Ludum Dare 38 (theme: Small World) by creating a turn-based multiplayer strategy game. It had the ridiculous name of *Imperative Righteousness Planetoid Domination Plan (IRPDP)*, matching the equally silly names and abilities available in the game.
+
+<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="/images/wfs-ld38/ld38-1.jpg" itemprop="contentUrl" data-size="1920x1080">
+            <img src="/images/wfs-ld38/thumbs/ld38-1.jpg" itemprop="thumbnail" alt="This image is missing. Run!" />
+        </a>
+        <figcaption itemprop="caption description">Screenshot of IRPDP in action.</figcaption>
+    </figure>
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="/images/wfs-ld37/ld38-2.jpg" itemprop="contentUrl" data-size="1920x1080">
+            <img src="/images/wfs-ld38/thumbs/ld37-2.jpg" itemprop="thumbnail" alt="Price check on isle 38..." />
+        </a>
+        <figcaption itemprop="caption description">Screenshot from the ugly dark side of the planet.</figcaption>
+    </figure>
+</div>
+
+Our second jam went more smoothly than the first, as is to be expected. We were both happy with the game we made, but the complexity of making a strategy game on a non-uniform grid let us down - the game turned out to be rather buggy. Despite this, the randomly generated names were entertaining, and the game idea has a fair bit of potential as a casual, couch-based game or something similar.
+
+The original postmortem/post-crunch ramble can be found at [the Ludum Dare blog](https://ldjam.com/events/ludum-dare/38/imperative-righteousness-planetoid-domination-plan/and-thats-the-second).
+<br>
