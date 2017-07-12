@@ -4,6 +4,8 @@ name: While False Studios
 
 description: Hobbyist game developer
 
+permalink: /blog/:year/:month/:day/:title.html
+
 kramdown:
     input: GFM
 

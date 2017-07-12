@@ -1,0 +1,39 @@
+@import "wfs";
+
+$blog_nav_width: 20%;
+$blog_content_width: 800px;
+
+.blog--post-date
+{
+    font-size: 10pt !important;
+    font-weight: bold;
+}
+
+.blog--content
+{
+    float: left;
+    width: 65%;
+}
+
+.blog--post-list
+{
+    @extend .wfs-main;
+    width: $blog_nav_width;
+    border: 0;
+    float: right;
+}
+
+.blog--post-list a
+{
+    font-style: normal;
+}
+
+.blog--prev-post
+{
+    float: left;
+}
+
+.blog--next-post
+{
+    float: right;
+}

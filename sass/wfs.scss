@@ -152,6 +152,20 @@ $site-orange-border: 2pt solid $site-accent-orange;
     color: $site-accent-green;
 }
 
+.wfs-social-centered
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    text-align: center;
+}
+
+.wfs-social-span
+{
+    margin: 10px 10px 0;
+    display: inline-block;
+}
+
 .wfs-footer
 {
     background-color: $site-accent-orange;

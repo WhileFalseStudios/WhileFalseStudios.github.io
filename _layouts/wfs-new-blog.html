@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ page.title }}</title>
+        <link href="/css/blog.css" type="text/css" rel="stylesheet">
+        {% if page.useGallery == true %}
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" type="text/css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css" type="text/css" rel="stylesheet">
+        <link href="/css/photoswipe/gallery.css" type="text/css" rel="stylesheet">
+        {% endif %}
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,300i|Work+Sans" rel="stylesheet">        
+        <script src="/js/drawer.js"></script>
+        <script src="/js/footer.js"></script>
+        {% if page.useGallery == true %}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js"></script>
+        <script src="/js/photoswipe/photoswipe-gallery.js"></script>
+        {% endif %}
+        <meta description="{{ page.description }}">
+    </head>
+    <body>
+        {% include header.html %}
+        <div class="page-constrain-width blog--wrapper">
+            <main class="blog--content wfs-main">
+                <h1>{{ page.title }}</h1>
+                <p class="blog--post-date">Posted by {{page.author}} on {{ page.displaydate }} under category {{page.categories}}</p>
+                {{ content }}
+                {% if page.next != nil or page.previous != nil %}
+                    {% if page.previous != nil %}
+                        <span class="blog--prev-post"><a href="{{page.previous.url}}">&lt; Previous</a></span>
+                    {% endif %}
+                    {% if page.next != nil %}
+                        <span class="blog--next-post"><a href="{{page.next.url}}">Next &gt;</a></span>
+                    {% endif %}
+                {% endif %}
+            </main>
+            <div class="blog--post-list">
+                <h2>More Posts</h2>
+                <ul>
+                    {% if site.related_posts.size == 0 %}
+                    Nothin' here.
+                    {% else %}
+                        {% for post in site.related_posts %}
+                        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                        {% endfor %}
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+        {% include footer.html %}
+
+        {% if page.useGallery == true %}
+        {% include photoswipe.html %}
+        {% endif %}
+
+    </body>
+</html>
