@@ -1,12 +1,5 @@
 @import "common";
 
-$site-accent-orange: #ca861b;
-$site-accent-green: #1caa4a;
-$site-header-color: #4D4D4D;
-$site-bg-color: #383838;
-
-$site-orange-border: 2pt solid $site-accent-orange;
-
 @mixin no-select()
 {
     user-select: none;
