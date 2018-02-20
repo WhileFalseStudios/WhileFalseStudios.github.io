@@ -71,3 +71,14 @@ Our second jam went more smoothly than the first, as is to be expected. We were 
 
 The original postmortem/post-crunch ramble can be found at [the Ludum Dare blog](https://ldjam.com/events/ludum-dare/38/imperative-righteousness-planetoid-domination-plan/and-thats-the-second).
 <br>
+
+## Weekly Game Jam 30 - February 2018
+Participants: Andrew, Wisley and some work from David
+
+[itch.io page](https://wfs.itch.io/elite-cleansing-squad)
+
+After an absurdly traumatic 2017, we finally has time to make another game by participating in the Weekly Game Jam 30, with the theme of "Not The Hero". The final result was a top-down shooter called *Elite Cleansing Squad*, a game in which you deliver justice and liberty to those who don't even know they need it.
+
+This jam went at a far more relaxed pace (apart from having to upload the final build at 2am) than the two previous Ludum Dares owing to its longer development time of 5 days. It also had a much more reasonable scope and we were able to make our most complete game yet because of it. Even though we didn't finish the art, the game is still quite impressive in terms of visual spectacle. 
+
+It's also our first game with a story! Andrew was happy.
