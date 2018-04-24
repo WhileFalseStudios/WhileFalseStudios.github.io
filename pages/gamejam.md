@@ -82,3 +82,14 @@ After an absurdly traumatic 2017, we finally has time to make another game by pa
 This jam went at a far more relaxed pace (apart from having to upload the final build at 2am) than the two previous Ludum Dares owing to its longer development time of 5 days. It also had a much more reasonable scope and we were able to make our most complete game yet because of it. Even though we didn't finish the art, the game is still quite impressive in terms of visual spectacle. We must have improved since our last two games as well, since we ended up winning the jam on gameplay. Must be all that camera shake.
 
 It's also our first game with a story! Andrew was happy.
+
+## Ludum Dare 41 - April 2018
+Participants: Andrew, Wisley, QA testing by David
+
+[itch.io page](https://wfs.itch.io/citizenship-pp)
+
+We worked up the courage to do another Ludum Dare, this time with the theme "Combine two incompatible genres". We made an incremental puzzle/hacking game called *Citizenship++* in which you cause an accidental Communist uprising by hacking people's bank accounts.
+
+This jam was also quite relaxed, especially compared to the other Ludum Dare jams we did. We once again had a much better scope than the first two game jams we did. 
+
+You can read more about it in our [postmortem on the game on ldjam.com](https://ldjam.com/events/ludum-dare/41/citizenship/citizenship-an-intoxicated-postmortem)
