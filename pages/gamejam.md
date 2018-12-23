@@ -11,6 +11,7 @@ permalink: /games/jams/index.html
 We participate in game jams when silly things like "real-life responsibilties" aren't getting in the way. Here's a journal of all our days of incredibly unhealthy sleep patterns.
 
 ## Ludum Dare 37 - December 2016
+### Switch
 Participants: Andrew, David
 
 [itch.io page](https://wfs.itch.io/switch-ludumdare37)
@@ -46,6 +47,7 @@ The original, slightly delirious from sleep deprivation postmortem of the game's
 <br>
 
 ## Ludum Dare 38 - April 2017
+### Imperative Righteousness Planetoid Domination Plan
 Participants: Andrew, David, with advice from Wisley
 
 [itch.io page](https://wfs.itch.io/irpdp)
@@ -73,6 +75,7 @@ The original postmortem/post-crunch ramble can be found at [the Ludum Dare blog]
 <br>
 
 ## Weekly Game Jam 30 - February 2018
+### Elite Cleansing Squad
 Participants: Andrew, Wisley and some work from David
 
 [itch.io page](https://wfs.itch.io/elite-cleansing-squad)
@@ -84,6 +87,7 @@ This jam went at a far more relaxed pace (apart from having to upload the final 
 It's also our first game with a story! Andrew was happy.
 
 ## Ludum Dare 41 - April 2018
+### Citizenship++
 Participants: Andrew, Wisley, QA testing by David
 
 [itch.io page](https://wfs.itch.io/citizenship-pp)
@@ -93,3 +97,13 @@ We worked up the courage to do another Ludum Dare, this time with the theme "Com
 This jam was also quite relaxed, especially compared to the other Ludum Dare jams we did. We once again had a much better scope than the first two game jams we did. 
 
 You can read more about it in our [postmortem on the game on ldjam.com](https://ldjam.com/events/ludum-dare/41/citizenship/citizenship-an-intoxicated-postmortem)
+
+## Ludum Dare 43 - December 2018
+### Shooty Shapes
+Participants: Andrew, David, Wisley
+
+[itch.io page](https://wfs.itch.io/shooty-shapes)
+
+We participated in the final Ludum Dare of 2018 with the theme of 'Sacrifices must be made'. We made a top-down shooter. This was our first game published by DA Games, and we really think it shows.
+
+You can read more about it in our [postmortem (WARNING: contains spoilers!)](https://ldjam.com/events/ludum-dare/43/shooty-shapes/shooty-shapes-a-man-in-a-suit-is-standing-behind-me-send-help)
